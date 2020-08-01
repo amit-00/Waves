@@ -1,0 +1,11 @@
+{
+  "name": "wavconvert",
+  "version": "1.0.0",
+  "description": "a Converter for mp3 and wav files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

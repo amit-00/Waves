@@ -4,8 +4,19 @@
   "description": "a Converter for mp3 and wav files",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --acrh=x64 --icon=./assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=darwin --acrh=ia32 --icon=./assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Waves\"",
+    "package-linux": "electron-packager . --overwrite --platform=linux --acrh=x64 --icon=./assets/icons/linux/icon.png --prune=false --out=release-builds"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "electron": "^9.1.2",
+    "electron-packager": "^15.0.0",
+    "mp3-to-wav": "^0.1.11",
+    "nodemon": "^2.0.4"
+  }
 }
